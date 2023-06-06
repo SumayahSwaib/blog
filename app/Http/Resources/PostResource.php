@@ -42,8 +42,8 @@ class PostResource
        $p->category_id = $r->category_id;
        $p->view = 0;
        $u = Auth::user();
-        $p->user_id = $u->id; 
-
+/*         $p->user_id = $u->id; 
+ */
        $images = User::files_uploader($_FILES);
       $p->photo ="no_image.jpg";
        
