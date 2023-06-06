@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <base href = "http://127.0.0.1:8000/" />
+  <base href = "{{url('')}}/" />
   <link rel="stylesheet" href="css/bootstrap.css">
   <title>Admin - Engineer Sumayah</title>
  
