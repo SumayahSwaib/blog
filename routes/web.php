@@ -28,6 +28,7 @@ Route::get('regester', function () { return view('regester');}) ->name('regester
 
  Route::get('dashboard/', function () { return view('dashboard/index');}) ->name('dashboard'); 
  Route::post('dashboard', [DashboardController::class, 'dashboard'])->name('dashboard'); 
+ 
 
 
 /*  Route::get('dashboard/categories', function () { return view('categories');}) ->name('categories'); 
@@ -36,8 +37,14 @@ Route::get('regester', function () { return view('regester');}) ->name('regester
  Route::post('dashboard/categories-create', [DashboardController::class, 'categories_store'])->name('categories-create');
   Route::get('dashboard/categories', [DashboardController::class, 'categories'])->name('categories'); 
   Route::post('dashboard/categories', [DashboardController::class, 'categories'])->name('dashboard/categories'); 
+  Route::get('dashboard/posts/{post_id}', [DashboardController::class, 'edit'])->name('dashboard/edit'); 
  
   Route::resource( 'dashboard/posts',PostResource::class,); 
+/*   Route::resource( 'dashboard/posts/edit',PostResource::class,); 
+ */ 
+
+/* Route::get('/', [HomeController::class, 'getData']);
+ */ 
 
 
 

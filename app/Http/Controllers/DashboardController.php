@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\NewsCategory;
+use App\Models\NewsPost;
 use App\Models\User;
 use Illuminate\Http\Request;
 use utils;
@@ -10,6 +11,16 @@ use utils;
 class DashboardController extends Controller
 {
 
+     public function edit($post_id  ){
+        $cat = NewsCategory::where([])->orderBy('name','asc')->get();
+/*         $post = NewsPost::where([''])->get();
+ */        $post = NewsPost::find($post_id );
+        return view('dashboard.edit',compact('post','cat')
+             );
+
+         /* compact('post','cat')); */ 
+        
+    } 
 
     public function categories(){
         $cat = NewsCategory::where([])->orderBy('name','asc')->get();

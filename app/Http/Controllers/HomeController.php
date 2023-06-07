@@ -15,6 +15,14 @@ class HomeController extends Controller
 
 
 {
+
+
+    public function getData(){
+        $posts = NewsPost::all();
+         return view('index',[
+            'posts' =>$posts
+         ]);
+      } 
     public function news($id){
         $p = NewsPost::findorfail($id);
         die('simple setails');

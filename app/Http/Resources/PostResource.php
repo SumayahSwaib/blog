@@ -19,16 +19,20 @@ class PostResource
      */
     {
 
+        
+     
+
     public function index(HttpRequest $request )
     {
-        $posts= NewsPost::where([])
+        
+        $posts= NewsPost::paginate(3);
+       /*  where([])
         ->orderBy ('id','desc')
-        ->get();
+        ->get(); */
          
         return view('dashboard.posts',[
             'posts'=> $posts
-                
-            
+         
             
         ]);
 
@@ -75,5 +79,6 @@ class PostResource
         ]);
 
     }
+    
 
 }

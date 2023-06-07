@@ -16,7 +16,10 @@
         <th scope="col">posts</th>
        <th scope="col">category</th>
        <th scope="col">views</th>
-      </tr>
+       <th scope="col">Edit</th>
+       <th scope="col">View</th>
+       <th scope="col">Delete</th>
+       </tr>
     </thead>
     <tbody>
       
@@ -32,8 +35,23 @@
          
           <th scope="row">{{$item ->cat->name }}</th>
           <th scope="row">{{$item ->view}}</th>
-
+         
+          <td >
             
+             <a href=" {{url('dashboard/posts/edit' .$item->id )}}" class="btn btn-success">Edit</a>
+             
+         </td>
+          <td >
+            
+             <a href="{{-- {{url('dashboard/posts/'.$item ->id)}} --}}" class="btn btn-primary">View</a>
+             
+         </td>
+          <td >
+            
+             <a href="{{-- {{url('dashboard/posts/'.$item ->id)}} --}}" class="btn btn-danger">Delete</a>
+             
+         </td>
+          
         
         </tr>
         
@@ -42,8 +60,8 @@
      
     </tbody>
   </table>
-   {{-- Pagination 
-  <div class="d-flex justify-content-center">
-    {!! $employees->links() !!}
-</div> --}}
+    {{-- Pagination  --}}
+   <div class="d-flex justify-content-center">
+   {{ $posts->onEachSide(1)->links() }} 
+</div>  
 @endsection

@@ -12,6 +12,7 @@
       <a class="navbar-brand" href="{{ route('index') }}">HOME</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
+        <link rel="stylesheet" href="footer.css">
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -66,8 +67,25 @@
         
   
 </body>
+<footer id="footer" class="bg-danger text-white d-flex-column text-center">
+  
+  
+  <div class="container text-left text-md-center">
+    
+  </div>
+  <!--/.Footer Links-->
+  
+  <!--Copyright-->
+  <div class="py-3 text-center">
+    &copy;  Engineer suma . All rights reserved
+    <script>
+      document.write(new Date().getFullYear())
+    </script> <a target="_blank" href=""></a> 
+  </div>
+  <!--/.Copyright-->
+</footer>
 
- <footer class="text-center">
+ {{-- <footer class="text-center">
   <p class="text-center">&copy; 2023 Engineer suma . All rights reserved.</p>
-  </footer>
+  </footer> --}}
 </html>
