@@ -19,18 +19,19 @@ class PostResource
      */
     {
 
-        
+      public function news($id){
+        $post = NewsPost::findorfail($id);
+        return view('post-details',[
+        'post' => $post
+        ]);
+      }  
      
 
     public function index(HttpRequest $request )
     {
         
-        $posts= NewsPost::paginate(3);
-       /*  where([])
-        ->orderBy ('id','desc')
-        ->get(); */
-         
-        return view('dashboard.posts',[
+     $posts= NewsPost::paginate(3);
+     return view('dashboard.posts',[
             'posts'=> $posts
          
             

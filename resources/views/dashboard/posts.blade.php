@@ -62,6 +62,6 @@
   </table>
     {{-- Pagination  --}}
    <div class="d-flex justify-content-center">
-   {{ $posts->onEachSide(1)->links() }} 
+   {{ $posts->links() }} 
 </div>  
 @endsection

@@ -12,4 +12,10 @@ class NewsPost extends Model
     public function cat(){
         return $this->belongsTo(NewsCategory::class,'category_id');
     }
+
+    public function comments()
+{
+    return $this->hasMany(NewsComment::class);
+  
+}
 }

@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <base href = "{{url('')}}/" />
   <link rel="stylesheet" href="css/bootstrap.css">
   <title>Engineer suma</title>
  
 
 </head>
+<div class="row">
+  <div class="col-md-8">
+    
+  </div>
+
+</div>
 <body class="container pt-0 mt-0">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-danger ">
     <div class="container-fluid">
       <a class="navbar-brand" href="{{ route('index') }}">HOME</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,30 +42,21 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('dashboard') }}">Logout</a>
         </li> 
-        {{-- @endauth --}}
-        {{-- @endauth --}}
-        {{-- @endauth --}}
-        {{-- @endauth --}}
-        {{-- @endauth --}}
-          
+        
 
-         
-          
-          
-        <form class="d-flex" role="search">
+         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-primary" type="submit">Search </button>
         </form>
+
+
       </div>
     </div>
   </nav>
   
        <h1 class="text- center">@yield('title')</h1> 
-        {{-- <a href="{{ route('model-save') }}">model-save</a><br>
-        <a href="{{ route('quering') }}">quering</a><br>
-        <a href="{{ route('relationships') }}">relationships</a><br> 
-       <a href="{{ route('model-quering') }}">model-quering</a>
- --}} <div class="container">
+       
+  <div class="container">
   @yield('content')
   <br>
  
